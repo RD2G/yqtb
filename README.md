@@ -31,7 +31,6 @@
 
 ```
 #wget https://npm.taobao.org/mirrors/chromedriver/83.0.4103.39/chromedriver_linux64.zip
-#
 ```
 
 - ChromeDrive解压
