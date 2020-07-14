@@ -7,10 +7,10 @@
 - 阿里云Ubuntu安装流程
 
 ```
-sudo wget http://www.linuxidc.com/files/repo/google-chrome.list -P /etc/apt/sources.list.d/
-wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install google-chrome-stable
+#sudo wget http://www.linuxidc.com/files/repo/google-chrome.list -P /etc/apt/sources.list.d/
+#wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+#sudo apt-get update
+#sudo apt-get install google-chrome-stable
 ```
 
 - Chrome启动
@@ -22,5 +22,13 @@ sudo apt-get install google-chrome-stable
 - Chrome版本查看
 
 ```
-google-chrome --version
+#google-chrome --version
+```
+
+- ChromeDriver安装
+
+这里我选择在 [淘宝镜像](https://developer.aliyun.com/mirror/NPM?from=tnpm) 下载
+
+```
+#wget https://npm.taobao.org/mirrors/chromedriver/LATEST_RELEASE_83.0.4103
 ```
