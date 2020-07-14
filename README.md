@@ -30,5 +30,5 @@
 这里我选择在 [淘宝镜像](https://developer.aliyun.com/mirror/NPM?from=tnpm) 下载
 
 ```
-#wget https://npm.taobao.org/mirrors/chromedriver/LATEST_RELEASE_83.0.4103
+#wget https://npm.taobao.org/mirrors/chromedriver/83.0.4103.39/chromedriver_linux64.zip
 ```
