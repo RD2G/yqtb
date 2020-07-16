@@ -16,7 +16,7 @@
 - Chrome启动
 
 ```
-google-chrome --headless --remote-debugging-port=9222 http://chromium.org --disable-gpu --no-sandbox
+#google-chrome --headless --remote-debugging-port=9222 http://chromium.org --disable-gpu --no-sandbox
 ```
 
 ##### 1.2 安装ChromeDriver
