@@ -15,9 +15,13 @@
 
 - Chrome启动
 
+```
+google-chrome --headless --remote-debugging-port=9222 http://chromium.org --disable-gpu --no-sandbox
+```
+
 ##### 1.2 安装ChromeDriver
 
-- 注意要安装Chrome相应版本的ChromeDriver
+\# 注意要安装Chrome相应版本的ChromeDriver
 
 - Chrome版本查看
 
