@@ -38,3 +38,9 @@
 ```
 #x chromedriver_linux64.zip
 ```
+
+- ChromeDriver权限设置
+
+```
+#cp chromedriver_linux64/chromedriver /usr/bin &&  chmod +x /usr/bin/chromedriver
+```
