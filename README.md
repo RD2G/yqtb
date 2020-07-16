@@ -46,5 +46,5 @@
 - ChromeDriver权限设置
 
 ```
-#cp chromedriver_linux64/chromedriver /usr/bin &&  chmod +x /usr/bin/chromedriver
+#mv -f chromedriver /usr/local/share/chromedriver  && ln -s /usr/local/share/chromedriver /usr/bin/chromedriver && ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver  &&  chmod +x /usr/bin/chromedriver
 ```
