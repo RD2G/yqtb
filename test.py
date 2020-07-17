@@ -36,11 +36,13 @@ def email(srt):
 
 #主函数
 def main():
-    if (tianbao()):
-        email("成功")
-    else:
-        email("失败")
+    n = input('请输入翱翔账号：')
+    p = input('请输入翱翔密码：')
+    tianbao(n,p)
+    #if (tianbao()):
+    #    email("成功")
+    #else:
+    #    email("失败")
 
 if __name__ == '__main__':
-    #main()
-    tianbao()
+    main()
