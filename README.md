@@ -65,8 +65,8 @@ print('见test.py')
 
 ##### 3.1.2 利用crontab服务
 
-格式：：分 时 日 月 星期几 [命令]
+格式：：分 时 日 月 星期几 使用者  [命令]
 
 ```
-vim /etc/crontab
+#vim /etc/crontab
 ```
