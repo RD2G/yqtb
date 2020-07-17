@@ -4,7 +4,8 @@ import time
 
 #填报
 def tianbao(usrname,paswrd):
-    option = webdriver.ChromeOptions()  # 静默模式
+    #静默模式
+    option = webdriver.ChromeOptions() 
     chrome_options = Options()
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
@@ -14,15 +15,25 @@ def tianbao(usrname,paswrd):
     browser = webdriver.Chrome(chrome_options=chrome_options)    #声明使用Chrome
     url = r'http://yqtb.nwpu.edu.cn/wx/xg/yz-mobile/index.jsp'
     browser.get(url)    #打开网页
-    # 登录信息
+    #登录信息
     username = browser.find_element_by_id('username')
     stu_number = usrname    #翱翔账户
     username.send_keys(stu_number)
     stu_password = paswrd   #翱翔密码
     password = browser.find_element_by_id('password')
     password.send_keys(stu_password)
-    # 点击登录
+    #点击登录
     browser.find_element_by_class_name('submit_button').click()
+    #点击健康登记按钮
+    browser.find_element_by_partial_link_text('健康登记').click()
+    #点击提交信息
+    browser.find_element_by_partial_link_text('提交填报信息').click()
+    time.sleep(1)
+    #承诺
+    browser.find_element_by_xpath('/html/body/div[3]/form/div[6]/div[2]/div[10]').click()
+    #确认提交
+    browser.find_element_by_partial_link_text('确认提交').click()
+    time.sleep(1)
     print('-'*100)
     print(browser.page_source)  #打印网页源代码
     print('-'*100)
