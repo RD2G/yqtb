@@ -48,3 +48,12 @@
 ```
 #mv -f chromedriver /usr/local/share/chromedriver  && ln -s /usr/local/share/chromedriver /usr/bin/chromedriver && ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver  &&  chmod +x /usr/bin/chromedriver
 ```
+
+### 二、提交脚本编写（python+selenium）
+
+```python
+print('见test.py')
+```
+
+#### 三、服务器部署
+

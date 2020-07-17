@@ -1,21 +1,32 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import time
 
 #填报
-def tianbao():
-    option = webdriver.ChromeOptions()
-    # 静默模式
-    option.add_argument('headless')
-    option.add_argument('--no-sandbox')
-    option.add_argument('--disable-gpu')
-    option.add_argument('--disable-dev-shm-usage')
-    browser = webdriver.Chrome()    #声明使用Chrome
-    url = 'www.qq.com'
+def tianbao(usrname,paswrd):
+    option = webdriver.ChromeOptions()  # 静默模式
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-gpu')
+    #chrome_options.add_argument('--remote-debugging-port=9222 http://chromium.org')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    browser = webdriver.Chrome(chrome_options=chrome_options)    #声明使用Chrome
+    url = r'http://yqtb.nwpu.edu.cn/wx/xg/yz-mobile/index.jsp'
     browser.get(url)    #打开网页
-    print('*'*100)
-    print(browser.title)  #打印网页源代码
-    print('*'*100)
-    browser.close()    #关闭浏览器
+    # 登录信息
+    username = browser.find_element_by_id('username')
+    stu_number = usrname    #翱翔账户
+    username.send_keys(stu_number)
+    stu_password = paswrd   #翱翔密码
+    password = browser.find_element_by_id('password')
+    password.send_keys(stu_password)
+    # 点击登录
+    browser.find_element_by_class_name('submit_button').click()
+    print('-'*100)
+    print(browser.page_source)  #打印网页源代码
+    print('-'*100)
+    browser.close()
 
 
 
@@ -23,6 +34,7 @@ def tianbao():
 def email(srt):
     pass
 
+#主函数
 def main():
     if (tianbao()):
         email("成功")
