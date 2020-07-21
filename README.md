@@ -51,6 +51,8 @@
 
 #### 二、提交脚本编写（python+selenium）
 
+环境：阿里云Ubuntu18.04.4 + python3.7 + selenium + chrome +chromedriver
+
 ```python
 print('见test.py')
 ```
@@ -63,7 +65,7 @@ print('见test.py')
 #vim dh.sh
 ```
 
-##### 3.1.2 利用crontab服务
+##### 3.1.2 利用crontab服务定时运行.py
 
 格式：：分 时 日 月 星期几 使用者  [命令]
 
